@@ -1,0 +1,28 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* Page styling */
+body {
+  font-size: 1.125em;
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgb(227, 228, 210);
+}
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 1.2em;
+  background-color: rgb(80, 27, 129);
+  height: 100vh;
+}
+
+#main_heading {
+  color: #bada55;
+  text-align: center;
+  text-decoration: underline;
+}
