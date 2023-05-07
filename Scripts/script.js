@@ -20,7 +20,8 @@ function playerOption() {
     option !== "scissor" &&
     option !== null
   ) {
-    option = prompt("Chose 'Rock', 'Paper' or 'Scissor': ");
+    // Taking input stirng and making it to lower case
+    option = prompt("Chose 'Rock', 'Paper' or 'Scissor': ").toLowerCase();
   }
   if (!option) {
     return "Execution canceled";
