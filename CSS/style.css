@@ -1,5 +1,26 @@
+@font-face {
+  font-family: "Flexi_IBM_VGA_True_437";
+  src: url(../Assets/Fonts/Flexi_IBM_VGA_True_437.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
+  /* default box sizing */
   box-sizing: border-box;
+
+  /* Colors */
+  --main-font-color: #20f00d;
+  --logo-color: #c6f00d;
+  --main-bg-color: #38373788;
+  --rock-color: #ff0063;
+  --paper-color: #fff205;
+  --scissor-color: #01fff4;
+  --body-bg-color: #22221d;
+  --transparent-bg-color: #f0f8ff1c;
+  --selected-bg-color: #0d080be1;
+  /* Fonts */
+  --logo-font: "Flexi_IBM_VGA_True_437";
 }
 
 *,
@@ -7,22 +28,93 @@
 *::after {
   box-sizing: inherit;
 }
+
 /* Page styling */
 body {
   font-size: 1.125em;
   font-family: "Courier New", Courier, monospace;
-  background-color: rgb(227, 228, 210);
+  color: var(--main-font-color);
+  background-color: var(--body-bg-color);
+  background-image: url(../Assets/IMG/pexels-felix-mittermeier-956999.jpg);
+  background-size: cover;
 }
 .container {
-  max-width: 850px;
+  max-width: 1040px;
   margin: 0 auto;
-  padding: 1.2em;
-  background-color: rgb(80, 27, 129);
+  /* padding: 1.2em; */
+  background-color: var(--main-bg-color);
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
+.main_header {
+  text-align: center;
+}
 #main_heading {
-  color: #bada55;
+  font-family: var(--logo-font);
+  color: var(--logo-color);
+  letter-spacing: 0.25em;
   text-align: center;
   text-decoration: underline;
+  margin-top: 1em;
+}
+.main_game {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1em;
+  text-align: center;
+}
+
+#player_cards .option {
+  cursor: pointer;
+}
+
+.game_description_text {
+  color: var(--main-font-color);
+  font-size: 1.5rem;
+}
+.win_condition_text {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--logo-color);
+}
+.round_result {
+  align-self: center;
+  padding: 2.5em;
+  border-radius: 0.5em;
+  background-color: var(--transparent-bg-color);
+  text-align: center;
+}
+.game_controls {
+  text-align: center;
+  background-color: var(--transparent-bg-color);
+}
+
+.game_controls button {
+  padding: 0.5em;
+  margin: 0 auto;
+  background-color: var(--logo-color);
+  color: var(--body-bg-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: all 0.9s;
+  cursor: pointer;
+}
+
+.game_controls button:active {
+  background-color: var(--scissor-color);
+}
+
+.option {
+  transition: all 1s ease-in;
+}
+.hidden {
+  display: none;
+}
+.selected {
+  text-align: center;
+  background: var(--selected-bg-color);
+  border-radius: 25%;
+  /* padding: 0.01em 0; */
 }

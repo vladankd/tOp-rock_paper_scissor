@@ -14,8 +14,64 @@
   </head>
   <body>
     <div class="container">
-      <h1 id="main_heading">Rock - Paper - Scissor Game</h1>
+      <header class="main_header">
+        <h1 id="main_heading">Rock - Paper - Scissor Game</h1>
+        <div class="score_container">
+          <h2>Score</h2>
+          <div class="score">
+            Player <span class="player_score">0</span> |
+            <span class="computer_score">0</span> Computer
+          </div>
+          <h2>Round <span class="round_playing">0</span></h2>
+          <div class="round_winner hidden">Player Won!</div>
+        </div>
+      </header>
+      <main class="main_game">
+        <div class="cards" id="player_cards">
+          <h3>Player option</h3>
+          <div class="option rock">
+            <h4>rock</h4>
+            <img src="./Assets/IMG/rock.svg" alt="rock" />
+          </div>
+          <div class="option paper">
+            <h4>paper</h4>
+            <img src="./Assets/IMG/paper.svg" alt="paper" />
+          </div>
+          <div class="option scissor">
+            <h4>scissor</h4>
+            <img src="./Assets/IMG/scissor.svg" alt="scissor" />
+          </div>
+        </div>
+        <div class="round_result">
+          <div class="game_description_text">
+            Press START to play the game
+            <p class="win_condition_text">
+              First to win 3 rounds is the Winner
+            </p>
+          </div>
+          <h3 class="game_winner hidden">Placeholder text</h3>
+        </div>
+        <div class="cards" id="computer_cards">
+          <h3>Computer option</h3>
+          <div class="option rock">
+            <h4>rock</h4>
+            <img src="./Assets/IMG/rock.svg" alt="rock" />
+          </div>
+          <div class="option paper">
+            <h4>paper</h4>
+            <img src="./Assets/IMG/paper.svg" alt="paper" />
+          </div>
+          <div class="option scissor">
+            <h4>scissor</h4>
+            <img src="./Assets/IMG/scissor.svg" alt="scissor" />
+          </div>
+        </div>
+      </main>
+      <footer class="game_controls">
+        <button class="start_game_btn" id="start_game_btn">Start</button>
+      </footer>
     </div>
-    <script src="./Scripts/script.js"></script>
+    <script src="./Scripts/main.js"></script>
+    <script></script>
   </body>
 </html>
