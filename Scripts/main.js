@@ -7,6 +7,7 @@ const startBtn = document.querySelector("#start_game_btn");
 startBtn.addEventListener("click", startGame);
 
 const gameWinner = document.querySelector(".game_winner");
+const roundWinner = document.querySelector(".round_winner");
 // gameWinner.classList.remove("hidden");
 // Score tracking
 let playerScore = 0;
@@ -47,8 +48,7 @@ function playRound(player, computer) {
   let playerOption = player;
   let computerOption = computer;
 
-  let roundWinner = document.querySelector(".round_winner");
-
+  // const roundWinner = document.querySelector(".round_winner");
   // Decide who won the round returns -1 if tie, returns 0 if computer won and returns 1 if player won
   if (playerOption === computerOption) {
     // console.log(`Player has choosen: ${playerOption}`);
@@ -108,7 +108,7 @@ function startGame() {
   numberOfRounds.innerText = roundsPlayed;
 
   gameWinner.classList.add("hidden");
-
+  roundWinner.classList.add("hidden");
   gameDescriptionText.innerText = "Chose the option";
 
   // remove selected clas from options when game restarts
